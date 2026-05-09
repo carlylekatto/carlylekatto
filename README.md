@@ -36,16 +36,16 @@
 ###
 
 <div align="center">
-  <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=kogakisaki&theme=transparent" alt="GitHub Streak" /></a>
-  <!-- <img src="https://streak-stats.demolab.com?user=kogakisaki&locale=en&mode=daily&theme=tokyonight&hide_border=false&border_radius=5&order=3" height="150" alt="streak graph"  /> -->
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=kogakisaki&radius=16&theme=tokyo-night&area=true&order=5" height="300" alt="activity-graph graph"  />
+  <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=carlylekatto&theme=transparent" alt="GitHub Streak" /></a>
+  <!-- <img src="https://streak-stats.demolab.com?user=carlylekatto&locale=en&mode=daily&theme=tokyonight&hide_border=false&border_radius=5&order=3" height="150" alt="streak graph"  /> -->
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=carlylekatto&radius=16&theme=tokyo-night&area=true&order=5" height="300" alt="activity-graph graph"  />
 </div>
 
 ###
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kogakisaki/kogakisaki/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kogakisaki/kogakisaki/output/github-contribution-grid-snake.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/carlylekatto/carlylekatto/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/carlylekatto/carlylekatto/output/github-contribution-grid-snake.svg" />
   <img alt="github-snake" src="github-snake.svg" />
 </picture>
 
