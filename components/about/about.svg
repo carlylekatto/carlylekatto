@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 204" width="100%" height="204" fill="none">
+  <defs>
+    <style>
+      :root {
+        /* Material 3 Dynamic Tokens - Light Theme */
+        --md-sys-color-surface-container: #F7F2FA;
+        --md-sys-color-outline-variant: #D0C9D6;
+        --md-sys-color-on-surface: #1D1B20;
+        --md-sys-color-on-surface-variant: #49454F;
+        --md-sys-color-primary: #6750A4;
+        --md-sys-color-primary-container: #EADDFF;
+        --md-sys-color-on-primary-container: #21005D;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          /* Material 3 Dynamic Tokens - Dark Theme */
+          --md-sys-color-surface-container: #1E1A22;
+          --md-sys-color-outline-variant: #3B3442;
+          --md-sys-color-on-surface: #E6E0E9;
+          --md-sys-color-on-surface-variant: #CAC4D0;
+          --md-sys-color-primary: #D0BCFF;
+          --md-sys-color-primary-container: #4F378B;
+          --md-sys-color-on-primary-container: #EADDFF;
+        }
+      }
+
+      /* Base Surface Card */
+      .m3-surface {
+        fill: var(--md-sys-color-surface-container);
+        stroke: var(--md-sys-color-outline-variant);
+        stroke-width: 1px;
+      }
+
+      /* Section Title */
+      .section-title {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 19px;
+        font-weight: 700;
+        letter-spacing: 0.15px;
+        fill: var(--md-sys-color-primary);
+      }
+
+      /* Body Text */
+      .about-body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 14.5px;
+        line-height: 25px;
+        letter-spacing: 0.2px;
+        fill: var(--md-sys-color-on-surface-variant);
+      }
+
+      .highlight {
+        fill: var(--md-sys-color-on-surface);
+        font-weight: 600;
+      }
+
+      .card-accent-dot {
+        fill: var(--md-sys-color-primary);
+      }
+    </style>
+  </defs>
+
+  <!-- M3 Card Container (Shape: extra-large 28dp matching header & tech-stack) -->
+  <rect x="1" y="1" width="798" height="202" rx="28" class="m3-surface" />
+
+  <!-- Card Content -->
+  <g transform="translate(36, 40)">
+    <!-- Header with square-terminal Icon -->
+    <g transform="translate(0, 0)">
+      <g transform="translate(0, -17) scale(0.03125)" fill="var(--md-sys-color-primary)">
+        <path d="M96 160C96 124.7 124.7 96 160 96L480 96C515.3 96 544 124.7 544 160L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 160zM167 223C157.6 232.4 157.6 247.6 167 256.9L230 319.9L167 382.9C157.6 392.3 157.6 407.5 167 416.8C176.4 426.1 191.6 426.2 200.9 416.8L280.9 336.8C290.3 327.4 290.3 312.2 280.9 302.9L200.9 222.9C191.5 213.5 176.3 213.5 167 222.9zM312 400C298.7 400 288 410.7 288 424C288 437.3 298.7 448 312 448L456 448C469.3 448 480 437.3 480 424C480 410.7 469.3 400 456 400L312 400z"/>
+      </g>
+      <text x="28" y="0" class="section-title">About me</text>
+    </g>
+
+    <!-- Bio Description Paragraph (4 balanced lines) -->
+    <text x="0" y="38" class="about-body">
+      <tspan x="0" dy="0"><tspan class="highlight">Software engineer</tspan> with a strong foundation in core development principles</tspan>
+      <tspan x="0" dy="26">and a hands-on approach to <tspan class="highlight">applied AI</tspan>. I focus on architecting <tspan class="highlight">clean, reliable systems</tspan></tspan>
+      <tspan x="0" dy="26">while leveraging modern AI capabilities to solve practical problems. Driven by curiosity,</tspan>
+      <tspan x="0" dy="26">continuous learning, and <tspan class="highlight">building software that just works</tspan>.</tspan>
+    </text>
+  </g>
+</svg>

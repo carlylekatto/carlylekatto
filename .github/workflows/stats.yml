@@ -1,0 +1,51 @@
+name: Update GitHub Stats & Activity Graph
+
+on:
+  schedule:
+    # Run daily at 00:15 UTC (off-peak to avoid queue bottlenecks)
+    - cron: "15 0 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/generate_stats.py"
+      - ".github/workflows/stats.yml"
+
+concurrency:
+  group: stats-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  update-stats:
+    name: Generate & Update Stats
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate Material 3 Stats & Activity SVGs
+        run: python scripts/generate_stats.py
+        env:
+          GITHUB_USER: ${{ github.repository_owner }}
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add components/stats/stats.svg components/activity-graph/activity-graph.svg
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(stats): update stats and activity graph SVGs [skip ci]"
+            git pull --rebase origin main
+            git push
+          fi
+

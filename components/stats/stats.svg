@@ -1,0 +1,290 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 196" width="100%" height="196" fill="none">
+  <defs>
+    <!-- ==================== TIER RING GRADIENTS ==================== -->
+    <!-- Tier 0: Dormant / Rest -->
+    <linearGradient id="ring-grad-dormant" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A09BA6" />
+      <stop offset="100%" stop-color="#6F6975" />
+    </linearGradient>
+
+    <!-- Tier 1: Spark (3 - 6 days) -->
+    <linearGradient id="ring-grad-spark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="50%" stop-color="#2979FF" />
+      <stop offset="100%" stop-color="#D0BCFF" />
+    </linearGradient>
+
+    <!-- Tier 2: Blaze (7 - 13 days - 1 week milestone) -->
+    <linearGradient id="ring-grad-blaze" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3D00" />
+      <stop offset="50%" stop-color="#FF9100" />
+      <stop offset="100%" stop-color="#FFD600" />
+    </linearGradient>
+
+    <!-- Tier 3: Inferno (14 - 29 days - 2 weeks milestone / Bass night vibe) -->
+    <linearGradient id="ring-grad-inferno" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF007F" />
+      <stop offset="50%" stop-color="#AA00FF" />
+      <stop offset="100%" stop-color="#7C4DFF" />
+    </linearGradient>
+
+    <!-- Tier 4: Supernova (30+ days - 1 month+ cosmic mastery) -->
+    <linearGradient id="ring-grad-supernova" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF176" />
+      <stop offset="35%" stop-color="#FFD700" />
+      <stop offset="70%" stop-color="#FF6D00" />
+      <stop offset="100%" stop-color="#E040FB" />
+    </linearGradient>
+
+    <!-- Divider Gradient -->
+    <linearGradient id="divider-fade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="var(--divider-color)" stop-opacity="0" />
+      <stop offset="20%" stop-color="var(--divider-color)" stop-opacity="0.6" />
+      <stop offset="80%" stop-color="var(--divider-color)" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="var(--divider-color)" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Ambient Center Glow Filter -->
+    <filter id="flame-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      :root {
+        /* Base Material 3 Dynamic Tokens - Light Theme */
+        --md-sys-color-surface-container: #F7F2FA;
+        --md-sys-color-outline-variant: #D0C9D6;
+        --md-sys-color-on-surface: #1D1B20;
+        --md-sys-color-on-surface-variant: #49454F;
+        --md-sys-color-outline: #79747E;
+        --md-sys-color-primary: #6750A4;
+        --stat-accent: #00639A;
+        --divider-color: #C4BDCC;
+
+        /* Tier default fallbacks (Light Theme) */
+        --tier-flame: #79747E;
+        --tier-ring: url(#ring-grad-dormant);
+        --tier-num: #1D1B20;
+        --tier-glow: rgba(121, 116, 126, 0.08);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          /* Base Material 3 Dynamic Tokens - Dark Theme */
+          --md-sys-color-surface-container: #1E1A22;
+          --md-sys-color-outline-variant: #3B3442;
+          --md-sys-color-on-surface: #E6E0E9;
+          --md-sys-color-on-surface-variant: #CAC4D0;
+          --md-sys-color-outline: #938F99;
+          --md-sys-color-primary: #D0BCFF;
+          --stat-accent: #80D4FF;
+          --divider-color: #4A4252;
+
+          /* Tier default fallbacks (Dark Theme) */
+          --tier-flame: #938F99;
+          --tier-ring: url(#ring-grad-dormant);
+          --tier-num: #E6E0E9;
+          --tier-glow: rgba(147, 143, 153, 0.12);
+        }
+      }
+
+      /* ==================== MILESTONE TIER DEFINITIONS ==================== */
+      /* Tier 0: Dormant (0 - 2 days) */
+      .tier-dormant {
+        --tier-flame: #8E8A93;
+        --tier-ring: url(#ring-grad-dormant);
+        --tier-num: var(--md-sys-color-on-surface);
+        --tier-glow: rgba(142, 138, 147, 0.08);
+      }
+
+      /* Tier 1: Spark (3 - 6 days) */
+      .tier-spark {
+        --tier-flame: #00B0FF;
+        --tier-ring: url(#ring-grad-spark);
+        --tier-num: #00B0FF;
+        --tier-glow: rgba(0, 176, 255, 0.22);
+      }
+      @media (prefers-color-scheme: dark) {
+        .tier-spark {
+          --tier-flame: #00E5FF;
+          --tier-num: #00E5FF;
+          --tier-glow: rgba(0, 229, 255, 0.28);
+        }
+      }
+
+      /* Tier 2: Blaze (7 - 13 days) */
+      .tier-blaze {
+        --tier-flame: #E65100;
+        --tier-ring: url(#ring-grad-blaze);
+        --tier-num: #E65100;
+        --tier-glow: rgba(255, 87, 34, 0.25);
+      }
+      @media (prefers-color-scheme: dark) {
+        .tier-blaze {
+          --tier-flame: #FF7A3D;
+          --tier-num: #FF7A3D;
+          --tier-glow: rgba(255, 122, 61, 0.32);
+        }
+      }
+
+      /* Tier 3: Inferno (14 - 29 days) */
+      .tier-inferno {
+        --tier-flame: #C2185B;
+        --tier-ring: url(#ring-grad-inferno);
+        --tier-num: #C2185B;
+        --tier-glow: rgba(233, 30, 99, 0.28);
+      }
+      @media (prefers-color-scheme: dark) {
+        .tier-inferno {
+          --tier-flame: #FF2A85;
+          --tier-num: #FF4081;
+          --tier-glow: rgba(255, 42, 133, 0.35);
+        }
+      }
+
+      /* Tier 4: Supernova (30+ days) */
+      .tier-supernova {
+        --tier-flame: #F57F17;
+        --tier-ring: url(#ring-grad-supernova);
+        --tier-num: #F57F17;
+        --tier-glow: rgba(255, 215, 0, 0.35);
+      }
+      @media (prefers-color-scheme: dark) {
+        .tier-supernova {
+          --tier-flame: #FFD700;
+          --tier-num: #FFD700;
+          --tier-glow: rgba(255, 215, 0, 0.45);
+        }
+      }
+
+      /* Base Surface Card */
+      .m3-surface {
+        fill: var(--md-sys-color-surface-container);
+        stroke: var(--md-sys-color-outline-variant);
+        stroke-width: 1px;
+      }
+
+      /* Center Hero Ring */
+      .hero-ring {
+        stroke: var(--tier-ring);
+        stroke-width: 3.5px;
+        stroke-linecap: round;
+        fill: none;
+        transition: stroke-width 0.3s ease, filter 0.3s ease;
+      }
+
+      .center-hero:hover .hero-ring {
+        stroke-width: 4.5px;
+        filter: drop-shadow(0 0 8px var(--tier-flame));
+      }
+
+      .flame-icon {
+        fill: var(--tier-flame);
+        transition: transform 0.25s ease, filter 0.25s ease;
+      }
+
+      .center-hero:hover .flame-icon {
+        transform: translate(388px, 17px) scale(0.04);
+        filter: drop-shadow(0 0 6px var(--tier-flame));
+      }
+
+      /* Typography */
+      .stat-num-side {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 38px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        fill: var(--stat-accent);
+        text-anchor: middle;
+      }
+
+      .stat-num-center {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        fill: var(--tier-num);
+        text-anchor: middle;
+        transition: fill 0.3s ease;
+      }
+
+      .stat-title {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 0.15px;
+        fill: var(--stat-accent);
+        text-anchor: middle;
+      }
+
+      .stat-title-center {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.15px;
+        fill: var(--tier-num);
+        text-anchor: middle;
+        transition: fill 0.3s ease;
+      }
+
+      .stat-date {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.2px;
+        fill: var(--md-sys-color-outline);
+        text-anchor: middle;
+      }
+
+      .divider-line {
+        stroke: url(#divider-fade);
+        stroke-width: 1.2px;
+      }
+    </style>
+  </defs>
+
+  <!-- M3 Surface Container (800x196, rx=28) -->
+  <rect x="1" y="1" width="798" height="194" rx="28" class="m3-surface" />
+
+  <!-- ==================== LEFT COLUMN: Total Contributions ==================== -->
+  <g transform="translate(155, 0)">
+    <text x="0" y="80" class="stat-num-side" id="stat-total-contribs">4,068</text>
+    <text x="0" y="116" class="stat-title">Total Contributions</text>
+    <text x="0" y="145" class="stat-date" id="stat-total-range">Nov 28, 2021 – Present</text>
+  </g>
+
+  <!-- Divider Line 1 (Left to Center) -->
+  <line x1="295" y1="28" x2="295" y2="168" class="divider-line" />
+
+  <!-- ==================== CENTER HERO: Current Streak ==================== -->
+  <g class="center-hero tier-dormant" id="hero-streak-group" cursor="default">
+    <!-- Ambient Radial Glow behind the Ring (changes color per tier) -->
+    <circle cx="400" cy="72" r="50" fill="var(--tier-glow)" filter="url(#flame-glow)" />
+
+    <!-- Circular Hero Arc (Gap at top for flame icon: center (400, 72), Radius 44) -->
+    <path d="M 425 36 A 44 44 0 1 1 375 36" class="hero-ring" />
+
+    <!-- Flame Icon Nestled in the Top Opening (23x23, shifted up by 8px to y=19) -->
+    <g transform="translate(388.5, 19) scale(0.0359)" class="flame-icon">
+      <path d="M256.5 37.6C265.8 29.8 279.5 30.1 288.4 38.5C300.7 50.1 311.7 62.9 322.3 75.9C335.8 92.4 352 114.2 367.6 140.1C372.8 133.3 377.6 127.3 381.8 122.2C382.9 120.9 384 119.5 385.1 118.1C393 108.3 402.8 96 415.9 96C429.3 96 438.7 107.9 446.7 118.1C448 119.8 449.3 121.4 450.6 122.9C460.9 135.3 474.6 153.2 488.3 175.3C515.5 219.2 543.9 281.7 543.9 351.9C543.9 475.6 443.6 575.9 319.9 575.9C196.2 575.9 96 475.7 96 352C96 260.9 137.1 182 176.5 127C196.4 99.3 216.2 77.1 231.1 61.9C239.3 53.5 247.6 45.2 256.6 37.7zM321.7 480C347 480 369.4 473 390.5 459C432.6 429.6 443.9 370.8 418.6 324.6C414.1 315.6 402.6 315 396.1 322.6L370.9 351.9C364.3 359.5 352.4 359.3 346.2 351.4C328.9 329.3 297.1 289 280.9 268.4C275.5 261.5 265.7 260.4 259.4 266.5C241.1 284.3 207.9 323.3 207.9 370.8C207.9 439.4 258.5 480 321.6 480z"/>
+    </g>
+
+    <!-- Current Streak Number inside Circle -->
+    <text x="400" y="85" class="stat-num-center" id="stat-current-streak">0</text>
+
+    <!-- Subtext below Circle -->
+    <text x="400" y="142" class="stat-title-center">Current Streak</text>
+    <text x="400" y="165" class="stat-date" id="stat-current-date">Oct 15 · Rest Mode</text>
+  </g>
+
+  <!-- Divider Line 2 (Center to Right) -->
+  <line x1="505" y1="28" x2="505" y2="168" class="divider-line" />
+
+  <!-- ==================== RIGHT COLUMN: Longest Streak ==================== -->
+  <g transform="translate(645, 0)">
+    <text x="0" y="80" class="stat-num-side" id="stat-longest-streak">73</text>
+    <text x="0" y="116" class="stat-title">Longest Streak</text>
+    <text x="0" y="145" class="stat-date" id="stat-longest-range">Aug 09, 2025 – Oct 20, 2025</text>
+  </g>
+</svg>
