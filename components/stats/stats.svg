@@ -248,7 +248,7 @@
 
   <!-- ==================== LEFT COLUMN: Total Contributions ==================== -->
   <g transform="translate(155, 0)">
-    <text x="0" y="80" class="stat-num-side" id="stat-total-contribs">4,069</text>
+    <text x="0" y="80" class="stat-num-side" id="stat-total-contribs">4,070</text>
     <text x="0" y="116" class="stat-title">Total Contributions</text>
     <text x="0" y="145" class="stat-date" id="stat-total-range">Nov 28, 2021 – Present</text>
   </g>
