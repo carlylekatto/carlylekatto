@@ -27,9 +27,8 @@
 
       /* Base Surface Card - matches header.svg surface container */
       .m3-surface {
-        fill: var(--md-sys-color-surface-container);
-        stroke: var(--md-sys-color-outline-variant);
-        stroke-width: 1px;
+        fill: transparent;
+        stroke: none;
       }
 
       /* M3 Square Badge - Primary Fill (swapped with icon color) */

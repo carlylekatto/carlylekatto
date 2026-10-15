@@ -243,9 +243,8 @@ def generate_activity_graph_svg(last_31_days, day_counts):
 
       /* Base Surface Card */
       .m3-surface {{
-        fill: var(--md-sys-color-surface-container);
-        stroke: var(--md-sys-color-outline-variant);
-        stroke-width: 1px;
+        fill: transparent;
+        stroke: none;
       }}
 
       /* Title */
