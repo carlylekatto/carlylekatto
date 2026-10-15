@@ -75,10 +75,10 @@
 
     <!-- Bio Description Paragraph (4 balanced lines) -->
     <text x="0" y="38" class="about-body">
-      <tspan x="0" dy="0"><tspan class="highlight">Software engineer</tspan> with a strong foundation in core development principles</tspan>
-      <tspan x="0" dy="26">and a hands-on approach to <tspan class="highlight">applied AI</tspan>. I focus on architecting <tspan class="highlight">clean, reliable systems</tspan></tspan>
-      <tspan x="0" dy="26">while leveraging modern AI capabilities to solve practical problems. Driven by curiosity,</tspan>
-      <tspan x="0" dy="26">continuous learning, and <tspan class="highlight">building software that just works</tspan>.</tspan>
+      <tspan x="0" dy="0">I'm a <tspan class="highlight">full-stack dev</tspan> building web apps, handy automations, and personal projects.</tspan>
+      <tspan x="0" dy="26">I work mostly with <tspan class="highlight">React</tspan>, focusing on snappy user experiences and reliable code.</tspan>
+      <tspan x="0" dy="26">I pick simple, pragmatic solutions over clever tricks that break the next morning.</tspan>
+      <tspan x="0" dy="26">Powered by <tspan class="highlight">EDM</tspan> — tight rhythms, clean loops, and logic that drops right on beat.</tspan>
     </text>
   </g>
 </svg>
