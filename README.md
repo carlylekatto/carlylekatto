@@ -18,14 +18,12 @@
       </picture>
       <br /><br />
       <p align="center">
-        <a href="https://discord.gg/pKbHYndH" target="_blank"><img src="./components/social/discord.svg" width="48" height="48" alt="Discord" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://www.facebook.com/carlyle.katto.1210" target="_blank"><img src="./components/social/facebook.svg" width="48" height="48" alt="Facebook" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://t.me/carlyle_katto" target="_blank"><img src="./components/social/telegram.svg" width="48" height="48" alt="Telegram" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://x.com/carlylekatto" target="_blank"><img src="./components/social/x.svg" width="48" height="48" alt="X" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://www.tiktok.com/@carlyle.katto" target="_blank"><img src="./components/social/tiktok.svg" width="48" height="48" alt="TikTok" /></a>
-      </p>
-      <p align="center">
-        <a href="mailto:carlylekatto@proton.me"><img src="./components/social/email.svg" height="48" alt="Email: carlylekatto@proton.me" /></a>
+        <a href="https://discord.gg/pKbHYndH" target="_blank"><img src="./components/social/discord.svg" width="32" height="32" alt="Discord" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://www.facebook.com/carlyle.katto.1210" target="_blank"><img src="./components/social/facebook.svg" width="32" height="32" alt="Facebook" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://t.me/carlyle_katto" target="_blank"><img src="./components/social/telegram.svg" width="32" height="32" alt="Telegram" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://x.com/carlylekatto" target="_blank"><img src="./components/social/x.svg" width="32" height="32" alt="X" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://www.tiktok.com/@carlyle.katto" target="_blank"><img src="./components/social/tiktok.svg" width="32" height="32" alt="TikTok" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="mailto:carlylekatto@proton.me"><img src="./components/social/email.svg" width="32" height="32" alt="Email: carlylekatto@proton.me" /></a>
       </p>
       <br />
     </td>
