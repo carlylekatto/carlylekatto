@@ -85,6 +85,31 @@
       .slogan-group:hover {
         transform: scale(1.03);
       }
+
+      /* Mobile Screen Optimization */
+      @media (max-width: 600px) {
+        .molle-regular-italic {
+          font-size: 86px;
+        }
+        .header-katt-group {
+          transform: translate(40px, 78px) !important;
+        }
+        .header-slogan-group {
+          transform: translate(40px, 115px) !important;
+        }
+        .text-logic, .text-bass {
+          font-size: 29px;
+        }
+        .slogan-icon-logic {
+          transform: translate(0, -23px) scale(0.045) !important;
+        }
+        .slogan-icon-bass {
+          transform: translate(0, -23px) rotate(-10deg, 10, 10) scale(0.045) !important;
+        }
+        .bass-group {
+          transform: translate(0, 36px) !important;
+        }
+      }
     </style>
   </defs>
 
@@ -92,25 +117,25 @@
   <rect x="1" y="1" width="798" height="166" rx="28" class="m3-surface" />
 
   <!-- 1. Name: Katt (Font Molle 72px) -->
-  <g transform="translate(40, 90)">
+  <g transform="translate(40, 90)" class="header-katt-group">
     <text x="0" y="0" class="molle-regular-italic">Katt</text>
   </g>
 
   <!-- 2. Slogan: Open, Natural and Creative Flow (No boxes, no slashes) -->
-  <g transform="translate(40, 132)">
+  <g transform="translate(40, 132)" class="header-slogan-group">
     <!-- Logic Clause -->
     <g class="slogan-group" cursor="default">
       <!-- Logic Binary Circuit Icon (20x20, perfectly vertically aligned) -->
-      <g transform="translate(0, -17) scale(0.03125)" fill="var(--logic-accent)">
+      <g transform="translate(0, -17) scale(0.03125)" fill="var(--logic-accent)" class="slogan-icon-logic">
         <path d="M464 96L464 224L480 224C497.7 224 512 238.3 512 256C512 273.7 497.7 288 480 288L384 288C366.3 288 352 273.7 352 256C352 238.3 366.3 224 384 224L400 224L400 140.4L394.1 142.4C377.3 148 359.2 138.9 353.6 122.2C348 105.5 357.1 87.3 373.8 81.7L421.8 65.7C431.6 62.4 442.4 64 450.7 70C459 76 464 85.7 464 96zM240 384L240 512L256 512C273.7 512 288 526.3 288 544C288 561.7 273.7 576 256 576L160 576C142.3 576 128 561.7 128 544C128 526.3 142.3 512 160 512L176 512L176 428.4L170.1 430.4C153.3 436 135.2 426.9 129.6 410.2C124 393.5 133.1 375.3 149.8 369.7L197.8 353.7C207.6 350.4 218.3 352.1 226.6 358.1C234.9 364.1 240 373.7 240 384zM128 128C128 92.7 156.7 64 192 64L256 64C291.3 64 320 92.7 320 128L320 224C320 259.3 291.3 288 256 288L192 288C156.7 288 128 259.3 128 224L128 128zM256 128L192 128L192 224L256 224L256 128zM384 352L448 352C483.3 352 512 380.7 512 416L512 512C512 547.3 483.3 576 448 576L384 576C348.7 576 320 547.3 320 512L320 416C320 380.7 348.7 352 384 352zM384 416L384 512L448 512L448 416L384 416z"/>
       </g>
       <text x="28" y="0" class="text-logic">Logic by day</text>
     </g>
 
     <!-- Bass Clause (Natural 26px breathing gap + Tilted Grooving Headphones) -->
-    <g transform="translate(172, 0)" class="slogan-group" cursor="default">
+    <g transform="translate(172, 0)" class="slogan-group bass-group" cursor="default">
       <!-- Bass Headphones Icon (20x20, tilted -10deg for musical groove) -->
-      <g transform="translate(0, -17) rotate(-10, 10, 10) scale(0.03125)" fill="var(--bass-accent)">
+      <g transform="translate(0, -17) rotate(-10, 10, 10) scale(0.03125)" fill="var(--bass-accent)" class="slogan-icon-bass">
         <path d="M160 288C160 199.6 231.6 128 320 128C408.4 128 480 199.6 480 288L480 325.5C470 322 459.2 320 448 320L432 320C405.5 320 384 341.5 384 368L384 496C384 522.5 405.5 544 432 544L448 544C501 544 544 501 544 448L544 288C544 164.3 443.7 64 320 64C196.3 64 96 164.3 96 288L96 448C96 501 139 544 192 544L208 544C234.5 544 256 522.5 256 496L256 368C256 341.5 234.5 320 208 320L192 320C180.8 320 170 321.9 160 325.5L160 288z"/>
       </g>
       <text x="28" y="0" class="text-bass">bass by night</text>
