@@ -316,28 +316,6 @@ def generate_activity_graph_svg(last_31_days, day_counts):
         cursor: pointer;
         filter: drop-shadow(0 0 4px var(--graph-line));
       }}
-
-      /* Mobile Screen Optimization */
-      @media (max-width: 600px) {{
-        .chart-title {{
-          font-size: 24px;
-        }}
-        .axis-title {{
-          font-size: 18px;
-        }}
-        .axis-tick-y {{
-          font-size: 15px;
-        }}
-        .axis-tick-x {{
-          font-size: 15px;
-        }}
-        .activity-curve {{
-          stroke-width: 4.8px;
-        }}
-        .data-dot {{
-          stroke-width: 2.2px;
-        }}
-      }}
     </style>
   </defs>
 
