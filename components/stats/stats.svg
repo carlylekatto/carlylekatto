@@ -248,7 +248,7 @@
 
   <!-- ==================== LEFT COLUMN: Total Contributions ==================== -->
   <g transform="translate(155, 0)">
-    <text x="0" y="80" class="stat-num-side" id="stat-total-contribs">4,074</text>
+    <text x="0" y="80" class="stat-num-side" id="stat-total-contribs">4,075</text>
     <text x="0" y="116" class="stat-title">Total Contributions</text>
     <text x="0" y="145" class="stat-date" id="stat-total-range">Nov 28, 2021 – Present</text>
   </g>
@@ -274,7 +274,7 @@
 
     <!-- Subtext below Circle -->
     <text x="400" y="142" class="stat-title-center">Current Streak</text>
-    <text x="400" y="165" class="stat-date" id="stat-current-date">Oct 15 – Oct 16 · Rest Mode</text>
+    <text x="400" y="165" class="stat-date" id="stat-current-date">Oct 15 – Oct 17 · Rest Mode</text>
   </g>
 
   <!-- Divider Line 2 (Center to Right) -->
