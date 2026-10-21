@@ -274,7 +274,7 @@
 
     <!-- Subtext below Circle -->
     <text x="400" y="142" class="stat-title-center">Current Streak</text>
-    <text x="400" y="165" class="stat-date" id="stat-current-date">Oct 20 · Rest Mode</text>
+    <text x="400" y="165" class="stat-date" id="stat-current-date">Oct 21 · Rest Mode</text>
   </g>
 
   <!-- Divider Line 2 (Center to Right) -->
